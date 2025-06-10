@@ -98,7 +98,7 @@ export const ProjectsSection = () => {
 							) : (
 								<div className="relative w-full h-64 bg-gray-100 dark:bg-gray-700">
 									<Image
-										src={project.image}
+										src={project.images[0]}
 										alt={project.title}
 										fill
 										sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
