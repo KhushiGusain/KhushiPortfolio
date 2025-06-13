@@ -11,6 +11,7 @@ interface ImageCarouselProps {
 
 export const ImageCarousel = ({ images, alt }: ImageCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [error, setError] = useState<string | null>(null);
 
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -37,7 +38,17 @@ export const ImageCarousel = ({ images, alt }: ImageCarouselProps) => {
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover transition-transform duration-300 group-hover:scale-105"
+            onError={(e) => {
+              console.error(`Error loading image: ${images[currentIndex]}`);
+              setError(`Failed to load image ${currentIndex + 1}`);
+            }}
+            priority={currentIndex === 0}
           />
+          {error && (
+            <div className="absolute inset-0 flex items-center justify-center bg-red-50 dark:bg-red-900/30">
+              <p className="text-red-600 dark:text-red-400 text-sm">{error}</p>
+            </div>
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </motion.div>
       </AnimatePresence>

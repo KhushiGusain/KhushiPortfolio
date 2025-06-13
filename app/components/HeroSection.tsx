@@ -56,7 +56,7 @@ export const HeroSection = () => {
 						<div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-2xl animate-pulse-slow"></div>
 						<div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
 							<Image
-								src="/WhatsApp Image 2025-04-28 at 11.40.01 PM.jpeg"
+								src="/WhatsApp Image 2025-06-08 at 02.57.17.jpeg"
 								alt="Khushi Gusain - WhatsApp Headshot 1"
 								fill
 								className="object-cover hover:scale-105 transition-transform duration-500"

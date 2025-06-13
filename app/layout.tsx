@@ -16,6 +16,10 @@ export const metadata: Metadata = {
 	title: 'Khushi Gusain - Full Stack Developer',
 	description:
 		'Student | Full Stack Developer | Innovator. Currently pursuing education at Bennett University, crafting modern web experiences with creativity and innovation.',
+	icons: {
+		icon: '/favicon.ico',
+		apple: '/apple-icon.png',
+	},
 	keywords: [
 		'Full Stack Developer',
 		'Web Developer',
