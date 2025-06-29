@@ -92,7 +92,7 @@ export const Navbar = () => {
                                 <motion.a
                                     key={item.name}
                                     href={item.href}
-                                    className={`text-[#3D0301] dark:text-gray-300 hover:text-[#B03052] dark:hover:text-[#D76C82] transition-colors relative group focus:outline-none focus:ring-2 focus:ring-[#B03052] focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900 px-1.5 py-0.5 rounded font-medium ${activeSection === item.id ? 'text-[#B03052] dark:text-[#D76C82]' : ''}`}
+                                    className={`text-[#3D0301] dark:text-gray-300 hover:text-[#B03052] dark:hover:text-[#D76C82] transition-colors relative group focus:outline-none focus:ring-2 focus:ring-[#B03052] focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900 px-1.5 py-2 rounded font-medium flex items-center justify-center min-h-[44px] ${activeSection === item.id ? 'text-[#B03052] dark:text-[#D76C82]' : ''}`}
                                     style={{ fontFamily: 'var(--font-inter)' }}
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
@@ -103,7 +103,7 @@ export const Navbar = () => {
                             ))}
                             <motion.a
                                 href="#contact"
-                                className="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-[#B03052] text-white font-bold shadow-lg border border-[#B03052] transition-all duration-300 hover:bg-gradient-to-r hover:from-[#B03052] hover:to-[#3D0301] focus:outline-none focus:ring-2 focus:ring-[#B03052] focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900 hover:scale-105 hover:shadow-xl text-sm sm:text-base"
+                                className="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-[#B03052] text-white font-bold shadow-lg border border-[#B03052] transition-all duration-300 hover:bg-gradient-to-r hover:from-[#B03052] hover:to-[#3D0301] focus:outline-none focus:ring-2 focus:ring-[#B03052] focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900 hover:scale-105 hover:shadow-xl text-sm sm:text-base flex items-center justify-center min-h-[44px]"
                                 style={{ fontFamily: 'var(--font-inter)' }}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
@@ -113,7 +113,7 @@ export const Navbar = () => {
                             {/* Theme Toggle Button */}
                             <motion.button
                                 onClick={toggleTheme}
-                                className="ml-2 sm:ml-4 p-2 sm:p-2.5 rounded-full border border-[#EBE8DB] dark:border-gray-700 bg-white dark:bg-gray-800 shadow transition-all duration-300 flex items-center justify-center hover:bg-gradient-to-r hover:from-[#B03052]/10 hover:to-[#3D0301]/10 dark:hover:from-[#D76C82]/10 dark:hover:to-[#B03052]/10 focus:outline-none focus:ring-2 focus:ring-[#B03052] focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900"
+                                className="ml-2 sm:ml-4 p-2 sm:p-2.5 rounded-full border border-[#EBE8DB] dark:border-gray-700 bg-white dark:bg-gray-800 shadow transition-all duration-300 flex items-center justify-center hover:bg-gradient-to-r hover:from-[#B03052]/10 hover:to-[#3D0301]/10 dark:hover:from-[#D76C82]/10 dark:hover:to-[#B03052]/10 focus:outline-none focus:ring-2 focus:ring-[#B03052] focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900 min-h-[44px] min-w-[44px]"
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                                 aria-label="Toggle theme"
@@ -176,7 +176,7 @@ export const Navbar = () => {
                                     <motion.a
                                         key={item.name}
                                         href={item.href}
-                                        className={`block text-[#3D0301] dark:text-gray-300 hover:text-[#B03052] dark:hover:text-[#D76C82] transition-colors font-medium text-sm sm:text-base ${activeSection === item.id ? 'text-[#B03052] dark:text-[#D76C82]' : ''}`}
+                                        className={`block text-[#3D0301] dark:text-gray-300 hover:text-[#B03052] dark:hover:text-[#D76C82] transition-colors font-medium text-sm sm:text-base py-2 px-3 rounded-lg hover:bg-[#EBE8DB]/50 dark:hover:bg-gray-700/50 ${activeSection === item.id ? 'text-[#B03052] dark:text-[#D76C82] bg-[#EBE8DB]/30 dark:bg-gray-700/30' : ''}`}
                                         style={{ fontFamily: 'var(--font-inter)' }}
                                         whileHover={{ x: 10 }}
                                         onClick={() => setIsMobileMenuOpen(false)}
@@ -186,7 +186,7 @@ export const Navbar = () => {
                                 ))}
                                 <motion.a
                                     href="#contact"
-                                    className="block px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-[#B03052] text-white text-center font-bold hover:bg-gradient-to-r hover:from-[#B03052] hover:to-[#3D0301] transition-all shadow-lg text-sm sm:text-base"
+                                    className="block px-4 sm:px-6 py-3 sm:py-3.5 rounded-full bg-[#B03052] text-white text-center font-bold hover:bg-gradient-to-r hover:from-[#B03052] hover:to-[#3D0301] transition-all shadow-lg text-sm sm:text-base"
                                     style={{ fontFamily: 'var(--font-inter)' }}
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
