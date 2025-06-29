@@ -17,33 +17,33 @@ export const HeroSection = () => {
 	];
 
 	return (
-		<div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-gray-900 pt-20 pb-12 lg:pt-24 lg:pb-16">
+		<div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-gray-900 pt-16 pb-8 sm:pt-20 sm:pb-12 lg:pt-24 lg:pb-16">
 			{/* Animated Background Grid */}
 			<div className="absolute inset-0 grid-background-dark opacity-5 dark:opacity-10">
 				<div className="grid-overlay animate-pulse-slow"></div>
 			</div>
 
 			{/* Hero Content */}
-			<div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-				<div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+			<div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-16">
 					{/* Left Content */}
 					<motion.div 
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
-						className="flex-1 text-left max-w-2xl mt-4 lg:mt-12"
+						className="flex-1 text-center lg:text-left max-w-2xl lg:max-w-none mt-4 lg:mt-12 order-2 lg:order-1"
 					>
 						{/* Name Section */}
 						<motion.div 
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
-							className="mb-6"
+							className="mb-4 sm:mb-6"
 						>
-							<h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-2 bg-gradient-to-r from-[#B03052] to-[#3D0301] bg-clip-text text-transparent" style={{ fontFamily: 'var(--font-dancing-script)' }}>
+							<h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-2 bg-gradient-to-r from-[#B03052] to-[#3D0301] bg-clip-text text-transparent" style={{ fontFamily: 'var(--font-dancing-script)' }}>
 								Khushi Gusain
 							</h1>
-							<div className="h-1 w-20 bg-gradient-to-r from-[#B03052] to-[#3D0301] rounded-full"></div>
+							<div className="h-1 w-16 sm:w-20 bg-gradient-to-r from-[#B03052] to-[#3D0301] rounded-full mx-auto lg:mx-0"></div>
 						</motion.div>
 
 						{/* Role & Description */}
@@ -51,12 +51,12 @@ export const HeroSection = () => {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
-							className="space-y-6 mb-8"
+							className="space-y-4 sm:space-y-6 mb-6 sm:mb-8"
 						>
-							<h2 className="text-xl lg:text-2xl font-semibold text-[#3D0301] dark:text-gray-300">
+							<h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-[#3D0301] dark:text-gray-300">
 								<span className="bg-gradient-to-r from-[#B03052] to-[#3D0301] dark:from-[#D76C82] dark:to-[#FFC2BA] bg-clip-text text-transparent">Software Developer | Innovator | Problem Solver</span>
 							</h2>
-							<p className="text-lg text-[#3D0301] dark:text-gray-300 leading-relaxed">
+							<p className="text-base sm:text-lg text-[#3D0301] dark:text-gray-300 leading-relaxed">
 								I'm a passionate software developer currently pursuing my education at
 								<span className="font-semibold bg-gradient-to-r from-[#B03052] to-[#3D0301] dark:from-[#D76C82] dark:to-[#FFC2BA] bg-clip-text text-transparent"> Bennett University</span>.
 								I believe that exceptional websites are not just built—they are thoughtfully crafted with creativity, innovation, and a strong focus on user experience.
@@ -69,7 +69,7 @@ export const HeroSection = () => {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 1.0, duration: 0.6, ease: "easeOut" }}
-							className="flex flex-nowrap gap-3 mb-8 -ml-10"
+							className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 mb-6 sm:mb-8"
 						>
 							{techStack.map((tech, index) => (
 								<motion.span
@@ -85,11 +85,11 @@ export const HeroSection = () => {
 									}}
 									className="
 										flex items-center
-										px-3 py-1.5
+										px-2.5 sm:px-3 py-1.5
 										rounded-full
 										font-medium
 										text-[#3D0301] dark:text-gray-300
-										text-sm
+										text-xs sm:text-sm
 										bg-[#EBE8DB] dark:bg-gray-800
 										border border-[#EBE8DB] dark:border-gray-700
 										shadow
@@ -101,7 +101,7 @@ export const HeroSection = () => {
 										whitespace-nowrap
 									"
 								>
-									{React.cloneElement(tech.icon, { className: 'text-base mr-2 group-hover:bg-gradient-to-r group-hover:from-[#B03052] group-hover:to-[#3D0301] group-hover:text-transparent group-hover:bg-clip-text' })}
+									{React.cloneElement(tech.icon, { className: 'text-sm sm:text-base mr-1.5 sm:mr-2 group-hover:bg-gradient-to-r group-hover:from-[#B03052] group-hover:to-[#3D0301] group-hover:text-transparent group-hover:bg-clip-text' })}
 									{tech.name}
 								</motion.span>
 							))}
@@ -113,9 +113,9 @@ export const HeroSection = () => {
 						initial={{ opacity: 0, x: -50 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.8, ease: "easeOut" }}
-						className="flex-shrink-0 mt-4 lg:mt-8 relative"
+						className="flex-shrink-0 mt-4 lg:mt-8 relative order-1 lg:order-2"
 					>
-						<div className="relative w-64 h-64 lg:w-80 lg:h-80">
+						<div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80">
 							{/* New arrow pointing from photo to hero section - only visible on desktop */}
 							<div className="hidden lg:block absolute" style={{ top: '30%', left: '-140px', zIndex: 20, pointerEvents: 'none', transform: 'translateY(-50%)' }}>
 								<motion.div
@@ -160,16 +160,16 @@ export const HeroSection = () => {
 							</motion.div>
 						</div>
 						{/* CTA Button below the photo, centered and modern */}
-						<div className="flex justify-center mt-16 mb-8">
+						<div className="flex justify-center mt-8 sm:mt-12 lg:mt-16 mb-6 sm:mb-8">
 							<motion.a 
 								href="#work" 
 								className="group relative inline-flex items-center justify-center"
 								whileHover={{ scale: 1.06 }}
 								whileTap={{ scale: 0.98 }}
 							>
-								<span className="relative px-7 py-2.5 bg-[#B03052] rounded-full inline-flex items-center justify-center w-full sm:w-auto text-white font-bold text-base shadow-lg hover:bg-gradient-to-r hover:from-[#B03052] hover:to-[#3D0301] transition-all duration-300">
+								<span className="relative px-6 sm:px-7 py-2.5 bg-[#B03052] rounded-full inline-flex items-center justify-center w-full sm:w-auto text-white font-bold text-sm sm:text-base shadow-lg hover:bg-gradient-to-r hover:from-[#B03052] hover:to-[#3D0301] transition-all duration-300">
 									View My Work
-									<svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
 								</svg>
 								</span>
@@ -184,14 +184,14 @@ export const HeroSection = () => {
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ delay: 1.6, duration: 0.6, ease: "easeOut" }}
-				className="absolute bottom-8 inset-x-0 flex flex-col items-center"
+				className="absolute bottom-4 sm:bottom-8 inset-x-0 flex flex-col items-center"
 			>
-				<span className="text-[#B03052] text-sm mb-2 font-medium">Scroll to explore</span>
+				<span className="text-[#B03052] text-xs sm:text-sm mb-2 font-medium">Scroll to explore</span>
 				<motion.div
 					animate={{ y: [0, 8, 0] }}
 					transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
 				>
-					<svg className="w-6 h-6 text-[#B03052]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<svg className="w-5 h-5 sm:w-6 sm:h-6 text-[#B03052]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
 					</svg>
 				</motion.div>
