@@ -9,6 +9,7 @@ export const HeroSection = () => {
 	const techStack = [
 		{ name: "Next.js", icon: <SiNextdotjs className="text-lg mr-2" /> },
 		{ name: "React", icon: <SiReact className="text-lg mr-2" /> },
+		{ name: "React Native", icon: <span className="text-lg mr-2">📱</span> },
 		{ name: "Node.js", icon: <SiNodedotjs className="text-lg mr-2" /> },
 		{ name: "PostgreSQL", icon: <SiPostgresql className="text-lg mr-2" /> },
 		{ name: "DynamoDB", icon: <SiAmazon className="text-lg mr-2" /> },
@@ -59,7 +60,7 @@ export const HeroSection = () => {
 							<p className="text-base sm:text-lg text-[#3D0301] dark:text-gray-300 leading-relaxed">
 								I'm a passionate software developer currently pursuing my education at
 								<span className="font-semibold bg-gradient-to-r from-[#B03052] to-[#3D0301] dark:from-[#D76C82] dark:to-[#FFC2BA] bg-clip-text text-transparent"> Bennett University</span>.
-								I believe that exceptional websites are not just built—they are thoughtfully crafted with creativity, innovation, and a strong focus on user experience.
+								I believe that exceptional applications are not just built—they are thoughtfully crafted with creativity, innovation, and a strong focus on user experience.
 								I love building interactive, scalable, and efficient solutions that make a real impact.
 							</p>
 						</motion.div>
