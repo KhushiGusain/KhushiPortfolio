@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/portfolio",
+      "destination": "https://portfolio.khushigusain.dev",
+      "permanent": true
+    }
+  ]
+}
